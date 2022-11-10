@@ -51,19 +51,26 @@ img {
   overflow: hidden;
 }
 
-.header { border-bottom: 1px solid #ececec; }
+.header {
+  border-bottom: 1px solid #ececec;
+}
 
 .container {
   width: 1200px;
+
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.list { list-style: none; }
+.list {
+  list-style: none;
+}
 
-.link { text-decoration: none; }
+.link {
+  text-decoration: none;
+}
 
 .main-nav {
   display: flex;
@@ -83,10 +90,12 @@ img {
   text-decoration: none;
 }
 
-.web-logo { color: var(--accent-color); }
+.web-logo {
+  color: var(--accent-color);
+}
 
-.site-nav { 
-  display: flex; 
+.site-nav {
+  display: flex;
   gap: 50px;
 }
 
@@ -116,7 +125,15 @@ img {
 }
 
 .nav-contact {
+  display: flex;
+  align-items: center;
+
   color: inherit;
+  fill: currentColor;
+}
+
+.nav-contact-icon {
+  margin-right: 10px;
 }
 
 .nav-contact:hover,
@@ -125,9 +142,18 @@ img {
 }
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
   text-align: center;
 
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/team.jpg);
   background-color: var(--secondary-background-color);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-title {
@@ -175,7 +201,9 @@ img {
   padding-bottom: 94px;
 }
 
-.section.no-padding { padding-bottom: 0; }
+.section.no-padding {
+  padding-bottom: 0;
+}
 
 .section-title {
   margin-bottom: 50px;
@@ -186,14 +214,32 @@ img {
   text-align: center;
 }
 
-.title { margin-bottom: 10px; }
+.title {
+  margin-bottom: 10px;
+}
 
 .features {
   display: flex;
   justify-content: space-between;
 }
 
-.feature { width: 270px; }
+.feature-box {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-white);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.feature {
+  width: 270px;
+}
 
 .features .title {
   font-size: 14px;
@@ -211,7 +257,48 @@ img {
   justify-content: space-between;
 }
 
-.team { background-color: var(--secondary-white); }
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+
+.bottom .social-link {
+  background-color: rgba(225, 225, 225, 0.1);
+  fill: var(--primary-white);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--primary-white);
+}
+
+.team {
+  background-color: var(--secondary-white);
+}
 
 .workers .title {
   font-size: inherit;
@@ -225,15 +312,16 @@ img {
   justify-content: space-between;
 }
 
-/* Тимчасовий стиль з макету для картки  */
-
 .workers > li {
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.workers .item { margin-bottom: 30px; }
+.workers .item {
+  margin-bottom: 30px;
+}
 
 .features .title,
 .workers .title,
@@ -242,10 +330,40 @@ img {
 }
 
 .position {
+  margin-bottom: 16px;
+
   line-height: 1.19;
   text-align: center;
+}
 
-  padding-bottom: 30px;
+.client-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.client-item {
+  width: 170px;
+  height: 92px;
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .bottom {
@@ -256,15 +374,15 @@ img {
 }
 
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: var(--primary-white);
   text-decoration: none;
-
-  display: inline-block;
-  margin-bottom: 20px;
 }
 
 .address,
@@ -277,11 +395,30 @@ img {
   text-decoration: none;
 }
 
-.footer-contact { color: var(--semi-transparent-white); }
+.footer-contact {
+  color: var(--semi-transparent-white);
+}
 
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
+}
+
+.footer-title {
+  display: block;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  color: var(--primary-white);
+}
+
+.footer-links {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-block {
+  margin-right: 70px;
 }
 
 /* Porftfolio styles */
@@ -292,15 +429,17 @@ img {
   margin-bottom: 34px;
 }
 
-.filters .item + .item { margin-left: 8px; }
+.filters .item + .item {
+  margin-left: 8px;
+}
 
 .filter {
   display: inline-block;
+  min-width: 73px;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
-  min-width: 73px;
 
   font-family: inherit;
   font-weight: 500;
@@ -320,12 +459,20 @@ img {
   color: var(--primary-white);
 
   background-color: var(--accent-color);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .projects {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.project-element:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects .name {
@@ -338,12 +485,13 @@ img {
 
 .project-type {
   line-height: 1.88;
+
   color: var(--primary-text-color);
 }
 
-.description { 
-  padding: 20px 24px; 
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+.description {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
 }
