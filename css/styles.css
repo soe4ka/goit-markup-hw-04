@@ -8,6 +8,7 @@
   --primary-white: #fff;
   --secondary-white: #f5f4fa;
   --semi-transparent-white: #ffffff99;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -278,7 +279,7 @@ img {
 
   background-color: transparent;
   border-radius: 50%;
-  fill: #afb1b8;
+  fill: var(--icon-color);
 }
 
 .bottom .social-link {
@@ -355,9 +356,9 @@ img {
   height: 100%;
 
   background-color: transparent;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
-  fill: #afb1b8;
+  fill: var(--icon-color);
 }
 
 .client-link:hover,
