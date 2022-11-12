@@ -226,9 +226,10 @@ img {
 
 .feature-box {
   display: flex;
-  height: 120px;
   align-items: center;
   justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
 
   background-color: var(--secondary-white);
@@ -262,7 +263,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 30px;
 }
 
 .social-item {
@@ -318,10 +318,6 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.workers .item {
-  margin-bottom: 30px;
-}
-
 .features .title,
 .workers .title,
 .projects .name {
@@ -333,6 +329,13 @@ img {
 
   line-height: 1.19;
   text-align: center;
+}
+
+.information {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .client-list {
@@ -373,7 +376,7 @@ img {
 }
 
 .bottom .social-link {
-  background-color: rgba(225, 225, 225, .1);
+  background-color: rgba(225, 225, 225, 0.1);
   fill: var(--primary-white);
 }
 
@@ -418,9 +421,12 @@ img {
 }
 
 .footer-title {
-  display: block;
   margin-bottom: 20px;
 
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-white);
 }
@@ -483,7 +489,9 @@ img {
   gap: 30px;
 }
 
-.project-element:hover {
+.project-element:hover,
+.project-element:focus {
+  display: inline-block;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
